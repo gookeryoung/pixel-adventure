@@ -217,9 +217,11 @@ GameObject:
   - component: {fileID: 371589639}
   - component: {fileID: 371589638}
   - component: {fileID: 371589641}
-  - component: {fileID: 371589640}
   - component: {fileID: 371589642}
   - component: {fileID: 371589643}
+  - component: {fileID: 371589644}
+  - component: {fileID: 371589645}
+  - component: {fileID: 371589640}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -292,8 +294,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &371589640
-BoxCollider2D:
+--- !u!70 &371589640
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -305,19 +307,9 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0060489327, y: -0.031801425}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
-    newSize: {x: 0.32, y: 0.32}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.20412827, y: 0.24635457}
-  m_EdgeRadius: 0
+  m_Offset: {x: 0.0012729963, y: -0.029598176}
+  m_Size: {x: 0.17565379, y: 0.22536087}
+  m_Direction: 0
 --- !u!50 &371589641
 Rigidbody2D:
   serializedVersion: 4
@@ -338,7 +330,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!95 &371589642
 Animator:
   serializedVersion: 3
@@ -370,6 +362,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af7130815bcc58749ab073e06f7f29f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 5
+--- !u!114 &371589644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371589637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71161cd389c49194ab81a32c8910521f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpVelocity: 6
+--- !u!114 &371589645
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371589637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d09e6413af43794f8488909082614d0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fallMultiplier: 2.5
+  lowJumpMultiplier: 2
 --- !u!1 &470518013
 GameObject:
   m_ObjectHideFlags: 0
