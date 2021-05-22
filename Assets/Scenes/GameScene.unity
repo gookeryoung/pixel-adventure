@@ -222,6 +222,7 @@ GameObject:
   - component: {fileID: 371589644}
   - component: {fileID: 371589645}
   - component: {fileID: 371589640}
+  - component: {fileID: 371589646}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -370,12 +371,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371589637}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 71161cd389c49194ab81a32c8910521f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 6
+  jumpVelocity: 5
 --- !u!114 &371589645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +391,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
+--- !u!114 &371589646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371589637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6d02cc8b54654c4e829924df90632f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpVelocity: 5
+  mask:
+    serializedVersion: 2
+    m_Bits: 192
+  boxHeight: 0.5
 --- !u!1 &470518013
 GameObject:
   m_ObjectHideFlags: 0
@@ -8990,7 +9008,7 @@ GameObject:
   - component: {fileID: 1436160859}
   - component: {fileID: 1436160858}
   - component: {fileID: 1436160860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Foreground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11259,7 +11277,7 @@ GameObject:
   - component: {fileID: 1622925267}
   - component: {fileID: 1622925266}
   - component: {fileID: 1622925268}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Bound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
