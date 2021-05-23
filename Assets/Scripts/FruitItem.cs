@@ -9,6 +9,8 @@ public class FruitItem : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private CircleCollider2D circleCollider2D;
 
+    public int BananaBonus = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -24,6 +26,9 @@ public class FruitItem : MonoBehaviour
             circleCollider2D.enabled = false;
 
             collectedEffect.SetActive(true);
+
+            GameController.Instance.totalScore += BananaBonus;
+            GameController.Instance.UpdateTotalScore();
 
             Destroy(gameObject, 0.2f);
         }
