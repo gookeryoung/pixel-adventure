@@ -9,29 +9,32 @@ public class FollowCamera : MonoBehaviour
     public float speed = 1f;//速度
     public float smooth = 2.5f;//平滑度
     public float minX = 0f;
-    public float maxX = 53f;
+    public float maxX = 40.3f;
 
     // Update is called once per frame
     void Update()
     {
-        Vector3 targetPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-
-        if (player.position.x > minX && player.position.x < maxX)
+        if (player != null)
         {
-            if (Mathf.Abs(transform.position.x - player.position.x) > ahead)
+            Vector3 targetPos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
+
+            if (player.position.x > minX && player.position.x < maxX)
             {
-                if (transform.position.x > player.position.x)
+                if (Mathf.Abs(transform.position.x - player.position.x) > ahead)
                 {
-                    targetPos = new Vector3(transform.position.x - speed, transform.position.y, transform.position.z);
-                }
-                else
-                {
-                    targetPos = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
+                    if (transform.position.x > player.position.x)
+                    {
+                        targetPos = new Vector3(transform.position.x - speed, transform.position.y, transform.position.z);
+                    }
+                    else
+                    {
+                        targetPos = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
+                    }
                 }
             }
-        }
 
-        transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * smooth);
-        // Debug.Log(player.position.x);
+            transform.position = Vector3.Lerp(transform.position, targetPos, Time.deltaTime * smooth);
+            Debug.Log(player.position.x);
+        }
     }
 }
