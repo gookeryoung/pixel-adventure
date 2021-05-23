@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Items
   - Traps
+  - Platforms
   layers:
   - Default
   - TransparentFX
@@ -16,7 +17,7 @@ TagManager:
   - Ground
   - Bound
   - Traps
-  - 
+  - Platforms
   - 
   - 
   - 
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: Traps
     uniqueID: 3054142377
+    locked: 0
+  - name: Platforms
+    uniqueID: 4210041209
     locked: 0
