@@ -44,6 +44,16 @@ public class Player : MonoBehaviour
         Run();
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Traps")
+        {
+            Destroy(gameObject);
+
+            GameController.Instance.ShowGameOverPanel();
+        }
+    }
+
     private void Run()
     {
         Vector3 movement = new Vector3(x, y, 0);
